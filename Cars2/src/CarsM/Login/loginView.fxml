@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="600.0" maxWidth="400.0" minHeight="600.0" minWidth="400.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.Login.LoginViewController">
+   <bottom>
+      <JFXButton buttonType="RAISED" defaultButton="true" onAction="#check_data" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #333;" text="دخول" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient cycleMethod="REPEAT" endX="0.49047619047619045" endY="0.4285714285714286">
+               <stops>
+                  <Stop color="#2085bf" />
+                  <Stop color="#0f474a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <BorderPane.margin>
+            <Insets bottom="100.0" />
+         </BorderPane.margin>
+      </JFXButton>
+   </bottom>
+   <top>
+      <ImageView fitHeight="136.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+
+                                            <image>
+                    <Image url="@../../img/42.png" />
+              </image>
+         <BorderPane.margin>
+            <Insets top="37.0" />
+         </BorderPane.margin>
+                    
+                                            
+      </ImageView>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="93.0" layoutY="51.0" prefHeight="198.0" prefWidth="214.0" spacing="80.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <JFXTextField fx:id="username" focusColor="#2d57d6" labelFloat="true" prefHeight="25.0" prefWidth="214.0" promptText="    اسم المستخدم     " style="-fx-background-radius: 5px;">
+                           <opaqueInsets>
+                              <Insets left="10.0" />
+                           </opaqueInsets>
+                        </JFXTextField>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/icons8-User-64.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <StackPane>
+                           <children>
+                              <JFXPasswordField fx:id="pass" focusColor="#2d57d6" labelFloat="true" prefHeight="25.0" prefWidth="214.0" promptText="رقم المرور     " />
+                              <JFXTextField fx:id="temp" />
+                           </children>
+                        </StackPane>
+                        <ImageView fx:id="toggle_pass" fitHeight="20.0" fitWidth="20.0" onMousePressed="#showPass" onMouseReleased="#hidePass" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/icons8-Wi-Fi-26.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="nameV" layoutX="77.0" layoutY="59.0" text="*" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="passV" layoutX="78.0" layoutY="163.0" text="*" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
