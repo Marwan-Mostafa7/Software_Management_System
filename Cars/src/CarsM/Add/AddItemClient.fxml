@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxWidth="1100.0" minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #32424A;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.Add.AddItemClientController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="اضافة" textFill="WHITESMOKE">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="550.0" />
+               </VBox.margin>
+            </Label>
+            <TabPane maxHeight="650.0" maxWidth="1300.0" prefHeight="650.0" prefWidth="1100.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab style="-fx-font-size: 15;" text="بيانات المنتج">
+                     <content>
+                        <AnchorPane maxHeight="600.0" maxWidth="1100.0" minHeight="600.0" minWidth="1100.0" prefHeight="600.0" prefWidth="1100.0">
+                           <children>
+                              <HBox layoutX="9.0" layoutY="25.0">
+                                 <children>
+                                    <GridPane prefHeight="489.0" prefWidth="500.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="62.0" prefWidth="296.0" style="-fx-text-fill: #FF9A3C;" text=" : تاريخ الاضافة" textFill="#0064ed" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="Date_label" alignment="CENTER" contentDisplay="CENTER" prefHeight="89.0" prefWidth="528.0" style="-fx-text-fill: #F5F5F5;" text="25 / 9 / 2017  ">
+                                             <font>
+                                                <Font name="System Italic" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="Time_label" alignment="CENTER" prefHeight="158.0" prefWidth="536.0" style="-fx-text-fill: #F5F5F5;" text="5:30 PM" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Italic" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="62.0" prefWidth="296.0" style="-fx-text-fill: #FF9A3C;" text=" : توقيت الاضافة" textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane prefHeight="489.0" prefWidth="559.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="368.66668701171875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="776.0" minWidth="10.0" prefWidth="190.33331298828125" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="68.0" prefWidth="192.0" style="-fx-text-fill: #FF9A3C;" text=":  Barcode " textFill="#0064ed" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="55.0" prefWidth="176.0" style="-fx-text-fill: #FF9A3C;" text=" نوع المنتج  :" textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="68.0" prefWidth="192.0" style="-fx-text-fill: #FF9A3C;" text="اسم المنتج  :  " textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="68.0" prefWidth="192.0" style="-fx-text-fill: #FF9A3C;" text="حالة المنتج   : " textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="68.0" prefWidth="192.0" style="-fx-text-fill: #FF9A3C;" text="ماركة المنتج  : " textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="68.0" prefWidth="192.0" style="-fx-text-fill: #FF9A3C;" text=" سعر الشراء  :" textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="68.0" prefWidth="192.0" style="-fx-text-fill: #FF9A3C;" text=" سعر البيع    :" textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="68.0" prefWidth="192.0" style="-fx-text-fill: #FF9A3C;" text=" عدد المنتج   :" textFill="#0064ed" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="barcode" alignment="CENTER_RIGHT" focusColor="#ff6f3c" style="-fx-text-fill: #000; -fx-background-color: #F5F5F5;">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <StackPane prefHeight="61.0" prefWidth="290.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <JFXComboBox fx:id="type_Of_product" focusColor="#d71b1b" onAction="#Add_new_Type" prefHeight="47.0" prefWidth="440.0" style="-fx-background-color: #f5f5f5;" />
+                                                <JFXTextField fx:id="Add_New_Type" alignment="CENTER_RIGHT" focusColor="#ff6f3c" prefHeight="97.0" prefWidth="368.0" style="-fx-text-fill: #F5F5F5;" />
+                                             </children>
+                                          </StackPane>
+                                          <JFXTextField fx:id="name_Of_Product" alignment="CENTER_RIGHT" focusColor="#ff6f3c" style="-fx-text-fill: #000; -fx-background-color: #F5F5F5;" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <HBox alignment="BOTTOM_LEFT" prefHeight="82.0" prefWidth="497.0" spacing="30.0" GridPane.rowIndex="3">
+                                             <children>
+                                                <JFXRadioButton fx:id="unknown_State" prefHeight="61.0" prefWidth="105.0" style="-fx-text-fill: #F5F5F5;" text="غير معروف">
+                                                   <font>
+                                                      <Font name="System Bold" size="17.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="State" />
+                                                   </toggleGroup>
+                                                </JFXRadioButton>
+                                                <JFXRadioButton fx:id="used_State" prefHeight="61.0" prefWidth="105.0" style="-fx-text-fill: #F5F5F5;" text="استعمال" toggleGroup="$State">
+                                                   <font>
+                                                      <Font name="System Bold" size="17.0" />
+                                                   </font>
+                                                </JFXRadioButton>
+                                                <JFXRadioButton fx:id="New_state" prefHeight="61.0" prefWidth="105.0" text="جديد" textFill="#f55252" toggleGroup="$State">
+                                                   <font>
+                                                      <Font name="System Bold" size="17.0" />
+                                                   </font>
+                                                </JFXRadioButton>
+                                             </children>
+                                          </HBox>
+                                          <StackPane GridPane.rowIndex="4">
+                                             <children>
+                                                <JFXComboBox fx:id="brand_Of_Product" onAction="#Add_new_brand" prefHeight="58.0" prefWidth="468.0" style="-fx-background-color: #F5f5f5;" />
+                                                <JFXTextField fx:id="Add_New_Brand" alignment="CENTER_RIGHT" focusColor="#ff6f3c" prefHeight="71.0" prefWidth="399.0" style="-fx-text-fill: #f5f5f5;" />
+                                             </children>
+                                          </StackPane>
+                                          <JFXTextField fx:id="buy_cost" alignment="CENTER_RIGHT" focusColor="#ff6f3c" style="-fx-text-fill: #000; -fx-background-color: #F5F5F5;" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="sell_cost" alignment="CENTER_RIGHT" focusColor="#ff6f3c" style="-fx-text-fill: #000; -fx-background-color: #F5F5F5;" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="number_Of_Product" alignment="CENTER_RIGHT" focusColor="#ff6f3c" style="-fx-text-fill: #000; -fx-background-color: #F5F5F5;" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </HBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-font-size: 15;" text="بيانات العميل">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="1100.0">
+                           <children>
+                              <GridPane layoutX="12.0" layoutY="16.0" prefHeight="503.0" prefWidth="713.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="221.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="530.6666717529297" minWidth="10.0" prefWidth="492.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <JFXTextField focusColor="WHITE" prefHeight="65.0" prefWidth="468.0" style="-fx-text-fill: #f5f5f5;" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label alignment="CENTER" prefHeight="89.0" prefWidth="221.0" style="-fx-text-fill: #FF9A3C;" text=" : اسم العميل" textFill="#0064ed">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="89.0" prefWidth="221.0" style="-fx-text-fill: #FF9A3C;" text=" : تليفون العميل" textFill="#0064ed" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="89.0" prefWidth="221.0" style="-fx-text-fill: #FF9A3C;" text=" : بريد العميل" textFill="#0064ed" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="89.0" prefWidth="221.0" style="-fx-text-fill: #FF9A3C;" text=" : اسم الشركة" textFill="#0064ed" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="89.0" prefWidth="221.0" style="-fx-text-fill: #FF9A3C;" text=" : تليفون العميل2" textFill="#0064ed" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField focusColor="WHITE" prefHeight="65.0" prefWidth="468.0" style="-fx-text-fill: #f5f5f5;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField focusColor="WHITE" prefHeight="65.0" prefWidth="468.0" style="-fx-text-fill: #f5f5f5;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField focusColor="WHITE" prefHeight="65.0" prefWidth="468.0" style="-fx-text-fill: #f5f5f5;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField focusColor="WHITE" prefHeight="65.0" prefWidth="468.0" style="-fx-text-fill: #f5f5f5;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </GridPane>
+                              <ImageView fitHeight="221.0" fitWidth="206.0" layoutX="833.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/elliot.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TabPane>
+            <HBox alignment="CENTER" spacing="40.0">
+               <children>
+                  <JFXButton fx:id="cancel_Btn" buttonType="RAISED" minHeight="50.0" minWidth="120.0" onAction="#refresh_page" ripplerFill="#bc5353" style="-fx-background-color: #ccc;" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" minHeight="50.0" minWidth="120.0" onAction="#Done_btn" style="-fx-background-color: #FF6F3C;" text="OK" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#00ffdd" />
+                              <Stop color="#1a7266" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
