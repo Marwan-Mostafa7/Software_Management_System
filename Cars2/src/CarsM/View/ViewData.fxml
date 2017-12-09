@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: #32424A;" stylesheets="@ViewData.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.View.ViewDataController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="الكشف" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" top="30.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="بحث عن :" textFill="#dddbdb">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                        <JFXTextField fx:id="searchField" focusColor="WHITE" minHeight="40.0" onKeyTyped="#Search" prefWidth="250.0" style="-fx-text-fill: #f5f5f5; -fx-background-color: rgba(0,0,0,0.1);" unFocusColor="#f37a39">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXTextField>
+                        <Label text="عن طريق :" textFill="#dddbdb">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                        <JFXComboBox fx:id="searchType" focusColor="WHITE" minHeight="40.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.1);" styleClass="combo-box" unFocusColor="#f37a39" />
+                    </children>
+                    <padding>
+                        <Insets bottom="25.0" top="10.0" />
+                    </padding>
+                </HBox>
+                <TableView fx:id="Table" minHeight="450.0" minWidth="1000.0" onMouseClicked="#Table_Clicked">
+                    <columns>
+                        <TableColumn fx:id="barcode" prefWidth="75.0" text="الكود" />
+                        <TableColumn fx:id="name" prefWidth="75.0" text="الأسم" />
+                        <TableColumn fx:id="type" prefWidth="75.0" text="النوع" />
+                        <TableColumn fx:id="state" prefWidth="75.0" text="الحالة" />
+                        <TableColumn fx:id="brand" prefWidth="75.0" text="الماركة" />
+                        <TableColumn fx:id="buy_cost" prefWidth="75.0" text="سعر الشراء" />
+                        <TableColumn fx:id="sell_cost" prefWidth="75.0" text="سعر البيع" />
+                        <TableColumn fx:id="quantity" prefWidth="75.0" text="الكمية" />
+                  <TableColumn fx:id="time" prefWidth="75.0" text="الوقت" />
+                  <TableColumn fx:id="date" prefWidth="75.0" text="التاريخ" />
+                  <TableColumn fx:id="agent" prefWidth="75.0" text="المندوب" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label style="-fx-background-color: rgba(0,0,0,0.2);" text="بيانات المندوب :-" textFill="#f37a39">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                     <padding>
+                        <Insets bottom="8.0" left="15.0" right="15.0" top="5.0" />
+                     </padding>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" top="20.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="الأسم :" textFill="#f37a39">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="agent_name" text="غير معرف" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets left="5.0" right="40.0" />
+                            </padding>
+                        </Label>
+                        <Label text="الشركة :" textFill="#f37a39">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agent_company" text="غير معرف" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets left="5.0" right="40.0" />
+                            </padding>
+                        </Label>
+                        <Label text="الايميل :" textFill="#f37a39">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agent_email" text="emailaddress@website.com" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets left="5.0" right="40.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="تليفون1 :" textFill="#f37a39">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="agent_phone1" text="011111111111" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets left="5.0" right="40.0" />
+                            </padding>
+                        </Label>
+                        <Label text="تليفون2 :" textFill="#f37a39">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agent_phone2" text="1111111" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets left="5.0" right="40.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="30.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+   <padding>
+      <Insets left="15.0" right="15.0" />
+   </padding>
+</AnchorPane>

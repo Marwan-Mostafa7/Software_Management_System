@@ -1,0 +1,11 @@
+.combo-box .list-view .list-cell {
+    -fx-text-fill: #000; 
+} 
+.combo-box .list-view .list-cell:selected, 
+.combo-box .list-view .list-cell:active, 
+.combo-box .list-view .list-cell:hover{
+    -fx-text-fill: #fafafa;
+} 
+.combo-box .list-cell{
+     -fx-text-fill: #fafafa;
+} 

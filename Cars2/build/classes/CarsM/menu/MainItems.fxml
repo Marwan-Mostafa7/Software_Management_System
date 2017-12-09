@@ -15,152 +15,162 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.menu.MainItemsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fullScreenKey" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #32424A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.menu.MainItemsController">
    <top>
-      <AnchorPane BorderPane.alignment="CENTER">
+      <AnchorPane style="-fx-background-color: rgba(0,0,0,0.15);" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="back_arrow" fitHeight="26.0" fitWidth="56.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="back_arrow" fitHeight="26.0" fitWidth="56.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#Clear_center" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
                <image>
-                  <Image url="@../../img/icons8-Back-26.png" />
+                  <Image url="@../../img/icons8-back-filled.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Label layoutX="82.0" layoutY="9.0" text="القائمة الرئيسية" textFill="#e0920b">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <JFXHamburger fx:id="hamburger" layoutX="1328.0" layoutY="15.0" onMouseClicked="#hide_menu">
+            <JFXHamburger fx:id="hamburger" onMouseClicked="#hide_menu" stylesheets="@menuCss.css" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="15.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXHamburger>
+            <ImageView fx:id="full_Screen" fitHeight="26.0" fitWidth="42.0" layoutX="62.0" layoutY="2.0" onMouseClicked="#fullScreenIcon" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@../../img/icons8-fit-to-width-filled.png" />
+               </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-            </JFXHamburger>
+            </ImageView>
          </children>
       </AnchorPane>
    </top>
    <bottom>
-      <HBox opacity="0.84" prefHeight="20.0" prefWidth="1400.0" style="-fx-background-color: #e0920b;" BorderPane.alignment="CENTER" />
+      <HBox opacity="0.84" prefHeight="20.0" prefWidth="1400.0" style="-fx-background-color: #FF6F3C;" BorderPane.alignment="CENTER" />
    </bottom>
-   <left>
-      <AnchorPane fx:id="All_Btns" prefHeight="630.0" prefWidth="285.0" BorderPane.alignment="CENTER">
+   <right>
+      <AnchorPane fx:id="All_Btns" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="631.0" prefWidth="277.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox layoutX="-12.0" layoutY="29.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: rgba(0,0,0,0.1);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXButton fx:id="Add" alignment="CENTER" buttonType="RAISED" onAction="#Addbtn" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #333;" text="اضافة" textAlignment="CENTER" textFill="#f8f8f8">
+                  <Label fx:id="Main_Menu" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: #F5F5F5;" text="القائمة الرئيسية" textAlignment="CENTER" textFill="#e0920b">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton fx:id="Add" alignment="CENTER" buttonType="RAISED" onAction="#Addbtn" prefHeight="70.0" prefWidth="155.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #FF6F3C; -fx-text-fill: #F5F5F5;" text="اضافة" textAlignment="CENTER" textFill="#f8f8f8">
                      <font>
                         <Font name="Arial" size="42.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
                      <VBox.margin>
-                        <Insets bottom="20.0" left="40.0" top="30.0" />
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
                      </VBox.margin>
                      <ripplerFill>
                         <LinearGradient endX="1.0" endY="1.0" startX="0.9666666666666666">
                            <stops>
                               <Stop color="#3f5e75" />
-                              <Stop color="#3a8c90fc" offset="1.0" />
+                              <Stop color="#00ffddfc" offset="1.0" />
                            </stops>
                         </LinearGradient>
                      </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="Update" alignment="CENTER" buttonType="RAISED" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #333;" text="تعديل" textAlignment="CENTER" textFill="#f8f8f8">
+                  <JFXButton fx:id="Update" alignment="CENTER" buttonType="RAISED" onAction="#Edit_Data" prefHeight="70.0" prefWidth="155.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #FF6F3C; -fx-text-fill: #F5F5F5;" text="تعديل" textAlignment="CENTER" textFill="#f8f8f8">
                      <font>
                         <Font name="Arial" size="42.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
                      <VBox.margin>
-                        <Insets left="40.0" />
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
                      </VBox.margin>
                      <ripplerFill>
                         <LinearGradient endX="1.0" endY="1.0" startX="0.9666666666666666">
                            <stops>
                               <Stop color="#3f5e75" />
-                              <Stop color="#3a8c90fc" offset="1.0" />
+                              <Stop color="#00ffddfc" offset="1.0" />
                            </stops>
                         </LinearGradient>
                      </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="View" alignment="CENTER" buttonType="RAISED" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #333;" text="كشف" textAlignment="CENTER" textFill="#f8f8f8">
+                  <JFXButton fx:id="View" alignment="CENTER" buttonType="RAISED" onAction="#View_Data" prefHeight="70.0" prefWidth="155.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #FF6F3C; -fx-text-fill: #F5F5F5;" text="كشف" textAlignment="CENTER" textFill="#f8f8f8">
                      <font>
                         <Font name="Arial" size="42.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
                      <VBox.margin>
-                        <Insets left="40.0" top="20.0" />
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
                      </VBox.margin>
                      <ripplerFill>
                         <LinearGradient endX="1.0" endY="1.0" startX="0.9666666666666666">
                            <stops>
                               <Stop color="#3f5e75" />
-                              <Stop color="#3a8c90fc" offset="1.0" />
+                              <Stop color="#00ffddfc" offset="1.0" />
                            </stops>
                         </LinearGradient>
                      </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="Bill" alignment="CENTER" buttonType="RAISED" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #333;" text="فاتورة" textAlignment="CENTER" textFill="#f8f8f8">
+                  <JFXButton fx:id="Bill" alignment="CENTER" buttonType="RAISED" onAction="#Bill" prefHeight="70.0" prefWidth="155.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #FF6F3C; -fx-text-fill: #F5F5F5;" text="فاتورة" textAlignment="CENTER" textFill="#f8f8f8">
                      <font>
                         <Font name="Arial" size="42.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
                      <VBox.margin>
-                        <Insets left="40.0" top="20.0" />
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
                      </VBox.margin>
                      <ripplerFill>
                         <LinearGradient endX="1.0" endY="1.0" startX="0.9666666666666666">
                            <stops>
                               <Stop color="#3f5e75" />
-                              <Stop color="#3a8c90fc" offset="1.0" />
+                              <Stop color="#00ffddfc" offset="1.0" />
                            </stops>
                         </LinearGradient>
                      </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="Out" alignment="CENTER" buttonType="RAISED" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #333;" text="خروج" textAlignment="CENTER" textFill="#f8f8f8">
+                  <JFXButton fx:id="Out" alignment="CENTER" buttonType="RAISED" onAction="#Exit_Prog" prefHeight="70.0" prefWidth="155.0" style="-fx-border-color: #e0920b; -fx-border-width: 4; -fx-background-color: #FF6F3C; -fx-text-fill: #F5F5F5;" text="خروج" textAlignment="CENTER" textFill="#f8f8f8">
                      <font>
                         <Font name="Arial" size="42.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
                      <ripplerFill>
                         <LinearGradient endX="1.0" endY="1.0" startX="0.9666666666666666">
                            <stops>
                               <Stop color="#3f5e75" />
-                              <Stop color="#3a8c90fc" offset="1.0" />
+                              <Stop color="#00ffddfc" offset="1.0" />
                            </stops>
                         </LinearGradient>
                      </ripplerFill>
-                     <VBox.margin>
-                        <Insets left="40.0" top="20.0" />
-                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                </children>
             </VBox>
          </children>
       </AnchorPane>
-   </left>
+   </right>
 </BorderPane>

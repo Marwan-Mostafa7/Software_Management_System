@@ -16,22 +16,22 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" maxWidth="400.0" minHeight="600.0" minWidth="400.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.Login.LoginViewController">
+<BorderPane maxHeight="600.0" maxWidth="400.0" minHeight="600.0" minWidth="400.0" snapToPixel="false" style="-fx-background-color: radial-gradient(focus-angle 291deg , focus-distance 59% , center 50% 50% , radius 55% ,  #32424A, #123);" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.Login.LoginViewController">
    <bottom>
-      <JFXButton buttonType="RAISED" defaultButton="true" onAction="#check_data" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #333;" text="دخول" textFill="WHITE" BorderPane.alignment="CENTER">
+      <JFXButton defaultButton="true" onAction="#check_data" prefHeight="53.0" prefWidth="163.0" style="-fx-background-color: #FF6F3C; -fx-background-radius: 0;" text="دخـول" textFill="WHITE" textOverrun="CLIP" BorderPane.alignment="CENTER">
          <font>
             <Font size="21.0" />
          </font>
          <ripplerFill>
             <LinearGradient cycleMethod="REPEAT" endX="0.49047619047619045" endY="0.4285714285714286">
                <stops>
-                  <Stop color="#2085bf" />
-                  <Stop color="#0f474a" offset="1.0" />
+                  <Stop color="#f5a286" />
+                  <Stop color="#ff6f3c" offset="1.0" />
                </stops>
             </LinearGradient>
          </ripplerFill>
          <BorderPane.margin>
-            <Insets bottom="100.0" />
+            <Insets bottom="70.0" top="30.0" />
          </BorderPane.margin>
       </JFXButton>
    </bottom>
@@ -49,54 +49,51 @@
       </ImageView>
    </top>
    <center>
-      <AnchorPane BorderPane.alignment="CENTER">
+      <AnchorPane style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutX="93.0" layoutY="51.0" prefHeight="198.0" prefWidth="214.0" spacing="80.0">
+            <VBox layoutX="74.0" layoutY="78.0" prefHeight="82.0" prefWidth="214.0" spacing="50.0">
                <children>
                   <HBox>
                      <children>
-                        <JFXTextField fx:id="username" focusColor="#2d57d6" labelFloat="true" prefHeight="25.0" prefWidth="214.0" promptText="    اسم المستخدم     " style="-fx-background-radius: 5px;">
+                        <JFXTextField fx:id="username" focusColor="#ff6f3c" labelFloat="true" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="235.0" promptText="اسم المستخدم     " style="-fx-text-fill: #fff; -fx-prompt-text-fill: #bbb;" styleClass="=" text="admin" unFocusColor="WHITE">
                            <opaqueInsets>
                               <Insets left="10.0" />
                            </opaqueInsets>
                         </JFXTextField>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/icons8-User-64.png" />
-                           </image>
-                        </ImageView>
                      </children>
                   </HBox>
-                  <HBox>
+                  <HBox prefWidth="214.0">
                      <children>
                         <StackPane>
                            <children>
-                              <JFXPasswordField fx:id="pass" focusColor="#2d57d6" labelFloat="true" prefHeight="25.0" prefWidth="214.0" promptText="رقم المرور     " />
-                              <JFXTextField fx:id="temp" />
+                              <JFXPasswordField fx:id="pass" focusColor="#ff6f3c" labelFloat="true" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="230.0" promptText="رقم المرور     " style="-fx-text-fill: #fff; -fx-prompt-text-fill: #bbb;" text="root" unFocusColor="WHITE" />
+                              <JFXTextField fx:id="temp" focusColor="#ff6f3c" labelFloat="true" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefWidth="235.0" style="-fx-text-fill: #fff; -fx-prompt-text-fill: #bbb;" unFocusColor="WHITE" />
                            </children>
                         </StackPane>
-                        <ImageView fx:id="toggle_pass" fitHeight="20.0" fitWidth="20.0" onMousePressed="#showPass" onMouseReleased="#hidePass" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/icons8-Wi-Fi-26.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets top="5.0" />
-                           </HBox.margin>
-                        </ImageView>
                      </children>
                   </HBox>
                </children>
             </VBox>
-            <Label fx:id="nameV" layoutX="77.0" layoutY="59.0" text="*" textFill="RED">
+            <Label fx:id="nameV" layoutX="56.0" layoutY="82.0" text="*" textFill="RED">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="passV" layoutX="78.0" layoutY="163.0" text="*" textFill="RED">
+            <Label fx:id="passV" layoutX="56.0" layoutY="158.0" text="*" textFill="RED">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
+            <ImageView fx:id="toggle_pass" fitHeight="20.0" fitWidth="20.0" layoutX="319.0" layoutY="161.0" onMousePressed="#showPass" onMouseReleased="#hidePass" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/show_password.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="319.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/user.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>

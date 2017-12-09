@@ -1,0 +1,25 @@
+.tab .tab-label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFF;
+}
+.tab-content-area {
+    -fx-background-color: rgba(0,0,0,0.1);
+}
+.tab:top {
+    -fx-padding: 7 15 7 15;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.tab:selected {
+    -fx-background-color: #FF6F3C; 
+}
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+.tab-pane *.tab-header-background {
+    -fx-background-color: transparent; 
+}
+.tab-pane .headers-region 
+{
+    -fx-effect: dropshadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0, 0);
+}

@@ -8,9 +8,9 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Cars.jar" size="293903" download="eager" />
-    <jar href="lib\jfoenix-1.8.0.jar" size="2370071" download="eager" />
-    <jar href="lib\sqlite-jdbc-3.7.2.jar" size="3201133" download="eager" />
+    <jar href="Cars.jar" size="340600" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2384520" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.7.2.jar" size="3201128" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Cars" >
     <param name="requiredFXVersion" value="8.0+"/>

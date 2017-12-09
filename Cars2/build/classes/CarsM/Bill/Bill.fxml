@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: #32424A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarsM.Bill.BillController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label text="عملية بيــع" textFill="WHITESMOKE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="barcodeField" focusColor="WHITE" onAction="#enteredBracode" onInputMethodTextChanged="#enteredBracode" onKeyReleased="#enteredBracode" prefHeight="50.0" prefWidth="450.0" style="-fx-text-fill: #FFF; -fx-background-color: rgba(0,0,0,0.2);" unFocusColor="#a8a8a8">
+               <HBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXButton fx:id="save" buttonType="RAISED" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #FF6F3C;" text="طباعة الفاتورة" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="BLACK" offset="0.007407407407407408" />
+                        <Stop color="#00ffdd" offset="0.007407407407407408" />
+                        <Stop color="#1a7266" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="15.0" top="30.0" />
+         </padding>
+      </HBox>
+      <VBox>
+         <children>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="الاسم :" textFill="#aaaaaa">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="itemName" text="اســـم المــــــنتج" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="السعر :" textFill="#aaaaaa">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="price" text="000" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="الكمية :" textFill="#aaaaaa">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="quantityField" maxWidth="50.0" style="-fx-background-color: rgba(0,0,0,0.3); -fx-text-fill: #fff;" text="1">
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="25.0" left="20.0" right="20.0" top="25.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" style="-fx-background-color: rgba(0,0,0,0.2);">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Label text="اضغط علي " textFill="#999999">
+                                 <padding>
+                                    <Insets left="4.0" />
+                                 </padding>
+                              </Label>
+                              <Label style="-fx-background-color: rgba(0,0,0,0.4);" text="Enter" textFill="#ff6f3c">
+                                 <padding>
+                                    <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="أو " textFill="#999999">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Button fx:id="addToBtn" mnemonicParsing="false" onAction="#addToTable" style="-fx-background-color: #f5f5f5;" text="اضافة للفاتورة" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Label text="اضغط علي " textFill="#999999">
+                                 <padding>
+                                    <Insets left="4.0" />
+                                 </padding>
+                              </Label>
+                              <Label style="-fx-background-color: rgba(0,0,0,0.4);" text="Del" textFill="#ff6f3c">
+                                 <padding>
+                                    <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="أو " textFill="#999999">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#removeFromTable" style="-fx-background-color: #9d172d;" text="حذف من الفاتورة" textFill="WHITE" />
+                           </children>
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" right="20.0" top="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <TableView fx:id="Table" prefWidth="960.0">
+        <columns>
+            <TableColumn fx:id="barcode" prefWidth="75.0" text="باركود" />
+          <TableColumn fx:id="name" prefWidth="75.0" text="المنتج" />
+          <TableColumn fx:id="type" prefWidth="75.0" text="النوع" />
+            <TableColumn fx:id="brand" prefWidth="75.0" text="الماركة" />
+            <TableColumn fx:id="sellCost" prefWidth="75.0" text="سعر القطعة" />
+            <TableColumn fx:id="quantity" prefWidth="75.0" text="الكمية" />
+            <TableColumn fx:id="totalCost" prefWidth="75.0" text="السعر الاجمالي" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="CENTER_LEFT" prefHeight="59.0">
+         <children>
+            <Label text="المبلغ الكلي :" textFill="#ff6f3c">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="totalPayed" text="000" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="المدفوع :" textFill="#aaaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="cashField" maxWidth="80.0" onAction="#calculateRemainder" onInputMethodTextChanged="#calculateRemainder" onKeyReleased="#calculateRemainder" style="-fx-background-color: rgba(0,0,0,0.3); -fx-text-fill: #fff;" text="0">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="الباقي :" textFill="#aaaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="remainder" text="00" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="39.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="cancel" buttonType="RAISED" maxHeight="30.0" prefWidth="100.0" style="-fx-background-color: #CCC;" text="الغاء">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="BLACK" offset="0.007407407407407408" />
+                              <Stop color="#00ffdd" offset="0.007407407407407408" />
+                              <Stop color="#1a7266" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" top="20.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+   </padding>
+</VBox>
